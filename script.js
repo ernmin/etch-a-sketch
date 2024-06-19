@@ -6,6 +6,15 @@ document.addEventListener('DOMContentLoaded', function() {
         createRow();
     }
     //row.appendChild(box);
+    let allBoxes = document.querySelectorAll('.box');
+    for(let numOfBox = 0; numOfBox < allBoxes.length; numOfBox++){
+        allBoxes[numOfBox].addEventListener('mouseover', function(){
+            allBoxes[numOfBox].style.backgroundColor = "cyan";
+        });
+        allBoxes[numOfBox].addEventListener('click', function(){
+            allBoxes[numOfBox].style.backgroundColor = "";
+        });
+    }
 
     function createRow(){
         const row = document.createElement("div");
