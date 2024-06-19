@@ -1,14 +1,22 @@
 document.addEventListener('DOMContentLoaded', function() {
-    function createSquare() {
-        const box = document.createElement("div");
-        const container = document.querySelector(".container");
-        box.classList.add("box");
-        box.style.border = "medium solid black";
-        container.appendChild(box);
-    }
+    const rowlength = 16;
+    const container = document.querySelector(".container");
 
-    for(let i = 0; i < 4; i++){
-        createSquare();
+    for(let i = 0; i < rowlength; i++){
+        createRow();
+    }
+    //row.appendChild(box);
+
+    function createRow(){
+        const row = document.createElement("div");
+        row.classList.add("rowbox");
+        container.appendChild(row);
+        for(let i = 0; i < rowlength; i++){
+            const box = document.createElement("div");
+            box.classList.add("box");
+            box.style.border = "medium solid black";
+            row.appendChild(box);
+        }
     }
     
 
