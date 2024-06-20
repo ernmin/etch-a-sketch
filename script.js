@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
     for(let i = 0; i < rowlength; i++){
         createRow();
     }
-    //row.appendChild(box);
+    
     let allBoxes = document.querySelectorAll('.box');
     for(let numOfBox = 0; numOfBox < allBoxes.length; numOfBox++){
         allBoxes[numOfBox].addEventListener('mouseover', function(){
@@ -27,6 +27,16 @@ document.addEventListener('DOMContentLoaded', function() {
             row.appendChild(box);
         }
     }
+
+
+    //let allBoxes = document.querySelectorAll('.box');
+    let resetButton = document.querySelector("#reset");
+    for(let numOfBox = 0; numOfBox < allBoxes.length; numOfBox++){
+        resetButton.addEventListener('click', function(){
+            allBoxes[numOfBox].style.backgroundColor = "";
+        });
+    }
+
     
 
 });
