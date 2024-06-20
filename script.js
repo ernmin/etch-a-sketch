@@ -51,12 +51,11 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function deleteRow(){
-        let allBoxes = document.querySelectorAll('.box');
-            for(let numOfBox = 0; numOfBox < allBoxes.length; numOfBox++){
-                allBoxes[numOfBox].remove();
-            }
+        let allBoxes = document.querySelectorAll('.rowbox');
+        for(let numOfBox = 0; numOfBox < allBoxes.length; numOfBox++){
+            allBoxes[numOfBox].remove();
         }
-
+    }
     function resetBox(){
         let allBoxes = document.querySelectorAll('.box');
         let resetButton = document.querySelector("#reset");
@@ -67,3 +66,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         }
 });
+
+//How to define a grid size but change the size of the boxes
+//Try to use flexgrow and flex shrink
