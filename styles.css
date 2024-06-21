@@ -1,20 +1,20 @@
 .page{
     display: flex;
-    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 .container {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    max-width: 900px;
-    flex-shrink: 1;
-    flex-grow: 1;
-  
+    width: 750px;
+    height: 750px;
+    border: solid
 }
 
 .box{
-    min-height: 36px;
-    min-width: 36px;
+    display: flex;
+    flex-grow: 1;
 }
 
 .buttonRow{
@@ -25,7 +25,8 @@
 .rowbox{
     display: flex;
     flex-direction: row;
-    justify-content: center;   
+    justify-content: center;
+    height: 100%;
 }
 
 .btn{

@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function() {
         for(let i = 0; i < rowlength; i++){
             const box = document.createElement("div");
             box.classList.add("box");
-            box.style.border = "medium solid black";
+            box.style.border = "thin solid black";
             row.appendChild(box);
         }
     }
